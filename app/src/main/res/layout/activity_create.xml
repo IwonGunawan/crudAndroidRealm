@@ -23,13 +23,13 @@
         android:padding="10dp">
 
         <EditText
-            android:id="@+id/tv_name"
+            android:id="@+id/student_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name" />
 
         <EditText
-            android:id="@+id/tv_address"
+            android:id="@+id/student_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Address" />
