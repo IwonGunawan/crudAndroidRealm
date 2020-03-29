@@ -1,11 +1,13 @@
 package com.crud.realm.utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.crud.realm.EditActivity;
 import com.crud.realm.R;
 
 import org.w3c.dom.Text;
@@ -35,10 +37,20 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.studentName.setText(studentModel.get(position).getStudentName());
         holder.studentAddress.setText(studentModel.get(position).getStudentAddress());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, EditActivity.class);
+                intent.putExtra("student_id", studentModel.get(position).getStudentId());
+                intent.putExtra("student_name", studentModel.get(position).getStudentName());
+                intent.putExtra("student_address", studentModel.get(position).getStudentAddress());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

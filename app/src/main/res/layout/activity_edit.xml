@@ -23,24 +23,39 @@
         android:padding="10dp">
 
         <EditText
-            android:id="@+id/tv_name"
+            android:id="@+id/student_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name" />
 
         <EditText
-            android:id="@+id/tv_address"
+            android:id="@+id/student_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Address" />
 
         <Button
-            android:id="@+id/btn_add"
+            android:id="@+id/btn_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp"
             android:background="@color/colorAccent"
             android:text="@string/update"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/design_default_color_error"
+            android:text="@string/delete"
             android:textColor="@android:color/white"
             android:textSize="20sp"/>
 

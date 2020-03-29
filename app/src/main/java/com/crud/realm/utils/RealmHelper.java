@@ -25,25 +25,12 @@ public class RealmHelper {
         realm = Realm.getDefaultInstance();
     }
 
-//    public void inputDataAwal() {
-//        StudentModel siswa = new StudentModel();
-//        siswa.setStudentId(1);
-//        siswa.setStudentName("Azhar");
-//        siswa.setStudentAddress("Pondok Indah");
-//
-//        realm.beginTransaction();
-//        realm.copyToRealm(siswa);
-//        realm.commitTransaction();
-//
-//        Toast.makeText(context, "Data berhasil ditambah", Toast.LENGTH_LONG).show();
-//    }
-
     /* LISTING */
     public ArrayList<StudentModel> listData() {
 
         ArrayList<StudentModel> data = new ArrayList<>();
         realmResults = realm.where(StudentModel.class).findAll();
-        realmResults.sort("studentId", Sort.ASCENDING);
+        realmResults.sort("studentId", Sort.DESCENDING);
 
         if (realmResults.size() > 0) {
 
